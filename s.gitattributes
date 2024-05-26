@@ -1,1 +1,5 @@
-.css linguist-detectable=false
+# Exclude all CSS files from Linguist detection
+*.css linguist-vendored
+
+# Exclude all HTML files from Linguist detection
+*.html linguist-vendored
