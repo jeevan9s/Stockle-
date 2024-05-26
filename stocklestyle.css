@@ -1,0 +1,412 @@
+* {
+    margin: 0;
+    padding: 0;
+    max-height: 1000px;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.headerBlock {
+    position: absolute;
+    top: -10px;
+    width: 100%;
+    height: 175px;
+    display: block;
+    background-color: rgb(54, 57, 68);
+    z-index: -1;
+}
+
+
+
+.mainHeader {
+    position: absolute;
+    top: 12px;
+    left: 10%;
+    font-family: 'Arvo';
+    font-size: 5vw; 
+    font-weight: bold;
+    display: inline-block;
+    color: rgb(126, 62, 106);
+    animation-name: fade1;
+    animation-duration: 3.85s;
+    animation-iteration-count: 1;
+}
+    
+
+
+      
+  
+
+.secondHeader1 {
+    position: absolute;
+    top: 60px;
+    left: 30%;
+    font-family: 'Tajawal';
+    font-weight: lighter;
+    font-size: 2vw; 
+    color: rgb(154, 163, 154);
+    animation-name: fade;
+    animation-duration: 3.85s;
+    
+}
+
+.secondHeader2 {
+    position: absolute;
+    top: 95px;
+    left: 30%;
+    font-family: 'Tajawal';
+    font-weight: lighter;
+    font-size: 2vw; 
+    color: rgb(154, 163, 154);
+    animation-name: fade;
+    animation-duration: 3.85s;
+    
+}
+
+@keyframes fade{
+    0%{opacity:0;}
+}
+
+.sectionHeader {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    left: 13%;
+    transform: translateX(-50%);
+    top: 220px;
+    font-family: 'Hedvig Letters Serif';
+    font-size: 2.3vw;
+    transition: font-size 0.5s ease-in-out, color 0.5s ease-in-out;
+    animation-delay: 1.68s;
+    animation-name: colour;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    color:rgb(26, 26, 26);
+    opacity:0;
+   
+    
+    
+    
+}
+
+@keyframes colour{
+    to{color:aliceblue;
+    opacity:100%}
+}
+
+
+@keyframes fade1{
+    0%{opacity:.1;}
+}
+
+.sectionHeader2{
+    position: absolute;
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    left: 68%;
+    transform: translateX(-50%);
+    top: 326px;
+    font-family: 'Hedvig Letters Serif';
+    font-size: 2.3vw;
+    color: aliceblue;
+    opacity:0;
+    
+    animation-delay: 1.6s;
+    animation-name: fade5;
+    animation-duration: 1.65s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade5{
+    to{
+        opacity: 100%;
+    }
+}
+
+@keyframes slideLeft2{
+    to{
+        transform: translateX(-290%)
+    }
+}
+
+
+.logo {
+    position: absolute;
+    top: 4px;
+    left: 1%;
+    max-width: 100%; 
+    animation-name: fade;
+    animation-duration: 2.85s;
+    
+}
+.logo:hover {
+    border: 3px solid rgb(142, 175, 142);
+    border-width: 9%;
+    border-radius: 12px;
+    padding: 1px;
+}
+
+#logo:hover{
+    border:10px;
+    border-color:rgb(154, 163, 154); ;
+ }
+
+.navigationBar ul {
+    list-style-type: none;
+    position: absolute;
+    left: 65%;
+    top: 60px;
+    padding: 0px;
+    margin: 0px;
+    overflow:left;
+}
+
+.navigationBar a {
+    font-size: 2vw; 
+    font-family: 'Tajawal';
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    padding: 0px;
+    display: block;
+    text-align: center;
+    margin-right: 11vw;
+    transition: font-size 0.5s ease-in-out, color 0.5s ease-in-out;
+    animation-name: slideDown;
+    animation-duration: 2.15s;
+    
+}
+
+@keyframes slideDown {
+    from{transform: translateY(-175%);}
+    
+}
+.navigationBar a:hover {
+    color: black;
+}
+
+.navigationBar li {
+    float: left;
+}
+
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 768px) {
+    .mainHeader {
+        font-size: 8vw;
+    }
+
+    .secondHeader1,
+    .secondHeader2 {
+        font-size: 4vw;
+    }
+
+    .navigationBar {
+        left: 5%;
+    }
+
+    .navigationBar a {
+        font-size: 4vw;
+        margin-right: 4vw;
+    }
+}
+
+.bodyText{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    left: 79%;
+    width: 35%;
+    transform: translateX(-50%);
+    top: 515px;
+    font-family: 'PT Serif Caption';
+    font-size: 1vw;
+    color:  rgb(126, 62, 106);
+    opacity: 0;
+    animation-delay: 1.85s;
+    animation-name: fade3;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+}
+
+
+.boxText{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    left: 64.5%;
+    transform: translateX(-50%);
+    top: 800px;
+    font-family: 'Hedvig Letters Serif';
+    font-size: 1.6vw;
+    color: aliceblue;
+    width: 17%;
+    opacity:0%;
+    animation-delay: 2s;
+    animation-name: fade3;
+    animation-duration: 1.65s;
+    animation-fill-mode: forwards;
+    
+}
+
+@keyframes slideLeft{
+    to{
+        transform: translateX(-300%)
+    }
+}
+
+
+.inputBox {
+    position: absolute;
+    opacity:0;
+    display: inline-block;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    left: 85%;
+    transform: translateX(-50%);
+    top: 845px;
+    border: 3.2px solid rgb(154, 163, 154);
+    border-radius: 10px;
+    font-family: 'Hedvig Letters Serif';
+    font-size: 1.3vw;
+    color:rgb(55, 175, 51);
+    animation-delay: 2s;
+    animation-name: fade3;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    }
+
+    @keyframes fade3{
+        to{
+           opacity: 100%
+    }
+}
+
+
+
+
+    
+     
+       
+    
+
+    #stockCode:hover{
+        border-color: rgb(126, 62, 106);
+        border-width: 6.4px;
+        border-radius: 10px;
+    }
+
+
+ #inputLabel:hover{
+    text-decoration: underline rgb(77, 128, 75);
+ }
+      
+
+
+#stockCode::placeholder {
+    color:rgb(22, 21, 21)
+}
+
+#stockCode:hover {
+    font-weight: bold;
+}
+#graphContainer{
+    position:relative;
+    top:135px;
+    left:-28%;
+    border: 3.2px solid rgb(154, 163, 154);
+    width: 40%;
+    
+    margin: 0 auto;
+}
+
+.footerBlock{
+    position: absolute;
+    top: 1250px;
+    width: 100%;
+    height: 120px;
+    display: block;
+    background-color: rgb(54, 57, 68);
+    z-index: -1;
+    padding: 1em;
+    overflow: hidden;
+}
+
+.footerText{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    left: 49%;
+    transform: translateX(-50%);
+    top: 1280px;
+    font-family: 'Hedvig Letters Serif';
+    font-size: 2vw;
+    color: aliceblue;
+    animation-name: slideUp;
+    animation-duration: .60s;
+}
+
+@keyframes slideUp {
+    from{transform: translateY(100%);}
+}
+
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.footerText a:hover {
+    border: 5px solid rgb(142, 175, 142);
+    border-width: 16%;
+    border-radius: 12px;
+    padding: 5px;
+}
+
+.refreshButton{
+    position: absolute;
+    display: inline-block;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    left: 84.850%;
+    transform: translateX(-50%);
+    top: 935px;
+    border: 3.2px solid rgb(154, 163, 154);
+    border-radius: 7px;
+    width:4.5%;
+    font-family: 'Tajawal';
+    font-size: large;
+    font-weight: bolder;
+    opacity: 0;
+    animation-delay: 3s;
+    animation-name: fade3;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+.refreshButton:hover{
+    border-color: rgb(126, 62, 106);
+    border-width: 4.6px;
+    border-radius: 7px;
+}
+.chart {
+    position: relative;
+    top: 27vh;
+    width: 110vh;
+    height: 130%;
+    margin: 0 auto; 
+    margin-left: 45px; 
+    border-color: rgb(126, 62, 106);
+    border-width: 90px;
+}
+
