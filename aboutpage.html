@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=PT Serif Caption' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Hedvig Letters Serif' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Tajawal' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/S1.png') }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type = 'image/png' href="S1.png">
+    <title>Stockle | Financial Visualization</title>
+</head>
+
+<style>
+    body {
+        background-color: rgb(26, 26, 26);
+    }
+</style>
+
+<body>
+    <nav class='navigationBar'>
+        <ul>
+            <li><a href="/">Home</a></li>
+        </ul>
+    </nav>
+
+   
+
+    <a href="http://127.0.0.1:5500/stockleproject/stockleAboutUspage.html">
+        <a href="/"><img src="{{ url_for('static', filename='images/logo.png') }}"  height="150" width="160"></a>
+    </a>
+    </a>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/aboutUs.css') }}">
+
+    <a class = 'mainHeader'href="/"> Stockle</a>
+    <h2 class="secondHeader1">Stock</h2>
+    <h2 class="secondHeader2">Visualization</h2>
+    <h1 class="aboutHeader">About Stockle</h1>
+    <h2 class="about2Header">How it Works</h2>
+    <p class="bodyText1">Stockle is a free-to-use financial advisory tool that illustrates a graph when the user inputs the ticker symbol for their company of choice.</p> 
+    
+    <p class="bodyText2">Stockle sources data from Yahoo Finance using a Python backend. The relevant data is then fetched and used to generate a line a graph using JavaScript.  The framework and styling of the site is done with HTML and CSS.</p>
+
+    <div class="headerBlock">
+    </div>
+
+    <div class="footerBlock2"> </div>
+
+    <span class="footerText2">
+        <a href="#" onclick="refreshPage()">2024 Stockle<sub>&trade;</sub></a>
+
+  </span>
