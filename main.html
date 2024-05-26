@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='jS/stockle.js') }}"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=PT Serif Caption"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Hedvig Letters Serif"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Arvo"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Tajawal"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/headerstyle.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/S1.png') }}" />
+    
+    <title>Stockle | Financial Visualization</title>
+    <style>
+      body {
+        background-color: rgb(26, 26, 26);
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navigationBar">
+      <ul>
+        <li><a href="/stockleAboutUspage">About</a></li>
+      </ul>
+    </nav>
+
+    <div class="headerBlock"></div>
+
+    <a href="http://127.0.0.1:5500/stockleproject/stocklewebsite.html">
+      <img class="logo" src="{{ url_for('static', filename='images/logo.png') }}" height="150" width="160" />
+    </a>
+
+
+   <a id = 'title' class = 'mainHeader'href="/">Stockle</a>
+    <h2 class="secondHeader1">Stock</h2>
+    <h2 class="secondHeader2">Visualization</h2>
+    <p class="sectionHeader">Stock Chart:</p>
+    <h1 class="sectionHeader2">Ticker Symbol:</h1>
+
+    <p class="bodyText">
+      Using fetched data from Yahoo Finance, this tool will generate a <em>line graph</em>
+      for the company stock that uses the ticker symbol entered in the box below.
+    </p>
+  
+
+    <main>
+      <label class = 'boxText'id="inputLabel" for="stockCode">Enter Ticker Symbol:</label>
+      <input class="inputBox" oninput="this.value = this.value.toUpperCase()" type="text" id="stockCode" id ="com" placeholder="XXXX" onkeypress="handleKeyPress(event)"/>
+      
+    </main>
+    
+
+    <div>
+      <canvas class ='chart'id="stock-chart"></canvas>
+    </div>
+     
+
+
+    
+
+    <div class="footerBlock"></div>
+
+    <button class = 'refreshButton'id = 'refresh'type="submit" onClick="refreshPage()">Reset</button>
+
+    
+  </body>
+
+  <span class="footerText">
+    <a href="/">2024 Stockle<subscript> ™</subscript></a>
+</span>
+
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      document.getElementById('getDataButton').addEventListener('click', getVisualizeStockData);
+    });
+  </script>
+
+</html>
