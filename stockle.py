@@ -2,7 +2,8 @@ from flask import Flask, jsonify, request, render_template
 import pandas as pd  
 import yfinance as yf
 
-app = Flask(__name__, template_folder='templates', static_folder='static')
+# flask setup, routes 
+app = Flask(__name__, template_folder='templates', static_folder='static') 
 
 @app.route('/')
 def index():
@@ -16,7 +17,7 @@ def stockleAboutUspage():
 def get_stock_data():
     stock_code = request.args.get('stockCode')
     
-
+# request data w inputted ticker key from js 
     try:
         stock = yf.Ticker(stock_code)
         stock_history = stock.history(period='1d', interval='1h')
@@ -30,7 +31,7 @@ def get_stock_data():
         }
 
         return jsonify(stock_data)
-
+#error handling 
     except Exception as e:
         return jsonify({'error': str(e)})
 
