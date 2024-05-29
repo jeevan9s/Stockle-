@@ -1,4 +1,4 @@
-
+// run on refresh (reset button)
 function handleKeyPress(event) {
   if (event.keyCode === 13) {
 
@@ -11,14 +11,15 @@ function handleKeyPress(event) {
 
 function refreshPage() {
   window.location.reload();
-}
+} 
+//function to get data, make request to python 
 function getVisualizeStockData() {
   const stockCode = document.getElementById("stockCode").value;
       fetch(`http://127.0.0.1:5000/api/get_stock_data?stockCode=${stockCode}`)
       .then((response) => response.json())
       .then((stockData) => {
         const ctx = document.getElementById("stock-chart");
-  
+  //chart js stuff
         new Chart(ctx, {
           type: "line",
           data: {
